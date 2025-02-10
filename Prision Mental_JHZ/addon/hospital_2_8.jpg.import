@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://3o585skatm8u"
+path.s3tc="res://.godot/imported/hospital_2_8.jpg-1820c9eefc99240da6514ede195a10be.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "5540c76c386f90634efac68316ec6e2d"
+}
+
+[deps]
+
+source_file="res://addon/hospital_2_8.jpg"
+dest_files=["res://.godot/imported/hospital_2_8.jpg-1820c9eefc99240da6514ede195a10be.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://addon/hospital_2_8.jpg"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0
