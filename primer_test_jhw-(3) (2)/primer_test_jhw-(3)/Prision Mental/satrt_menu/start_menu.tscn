@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://b68vndjil6dv0"]
+
+[ext_resource type="Script" path="res://satrt_menu/start_menu.gd" id="1_s0kpi"]
+[ext_resource type="Texture2D" uid="uid://bfqw5glb11qdx" path="res://fotos_logo/logogamejhw.png" id="2_o2m06"]
+[ext_resource type="FontFile" uid="uid://cfla7lub2jalq" path="res://tipo_de_texto/Branda-yolq.ttf" id="3_0fd8p"]
+
+[node name="start_menu" type="Node2D"]
+script = ExtResource("1_s0kpi")
+
+[node name="start" type="Button" parent="."]
+offset_left = 93.0
+offset_top = 294.0
+offset_right = 369.0
+offset_bottom = 397.0
+theme_override_fonts/font = ExtResource("3_0fd8p")
+theme_override_font_sizes/font_size = 92
+text = "Play"
+
+[node name="quit" type="Button" parent="."]
+offset_left = 88.0
+offset_top = 545.0
+offset_right = 364.0
+offset_bottom = 648.0
+theme_override_fonts/font = ExtResource("3_0fd8p")
+theme_override_font_sizes/font_size = 92
+text = "Salir"
+
+[node name="Logogames" type="Sprite2D" parent="."]
+position = Vector2(633, 476)
+scale = Vector2(0.140508, 0.144841)
+texture = ExtResource("2_o2m06")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 91.0
+offset_top = 73.0
+offset_right = 1211.0
+offset_bottom = 318.0
+theme_override_fonts/font = ExtResource("3_0fd8p")
+theme_override_font_sizes/font_size = 181
+text = "Prisión Mental"
+
+[connection signal="pressed" from="start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
