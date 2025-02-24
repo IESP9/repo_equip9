@@ -1,0 +1,69 @@
+[gd_scene load_steps=4 format=3 uid="uid://b68vndjil6dv0"]
+
+[ext_resource type="Script" path="res://script/start_menu.gd" id="1_bvbb6"]
+[ext_resource type="FontFile" uid="uid://cfla7lub2jalq" path="res://otros/tipo_de_texto/Branda-yolq.ttf" id="2_ugflp"]
+[ext_resource type="Texture2D" uid="uid://dllpr3hfeqr5t" path="res://otros/fotos_logo/JHW_LOGO.png" id="3_g8y0a"]
+
+[node name="start_menu" type="Node2D"]
+script = ExtResource("1_bvbb6")
+
+[node name="start" type="Button" parent="."]
+offset_left = 64.0
+offset_top = 225.0
+offset_right = 306.0
+offset_bottom = 291.53
+scale = Vector2(1.2, 1.2)
+pivot_offset = Vector2(0, 75.92)
+theme_override_fonts/font = ExtResource("2_ugflp")
+theme_override_font_sizes/font_size = 50
+text = "New Game"
+
+[node name="quit" type="Button" parent="."]
+offset_left = 72.0
+offset_top = 602.007
+offset_right = 265.815
+offset_bottom = 668.537
+scale = Vector2(1.2, 1.2)
+pivot_offset = Vector2(0, 63.26)
+theme_override_fonts/font = ExtResource("2_ugflp")
+theme_override_font_sizes/font_size = 50
+text = "Salir"
+
+[node name="ajustes" type="Button" parent="."]
+offset_left = 72.0
+offset_top = 463.652
+offset_right = 265.815
+offset_bottom = 530.182
+scale = Vector2(1.2, 1.2)
+pivot_offset = Vector2(0, 63.26)
+theme_override_fonts/font = ExtResource("2_ugflp")
+theme_override_font_sizes/font_size = 50
+text = "Ajustes"
+
+[node name="ajustes2" type="Button" parent="."]
+offset_left = 68.0
+offset_top = 333.0
+offset_right = 261.815
+offset_bottom = 399.53
+scale = Vector2(1.2, 1.2)
+pivot_offset = Vector2(0, 63.26)
+theme_override_fonts/font = ExtResource("2_ugflp")
+theme_override_font_sizes/font_size = 50
+
+[node name="Logogames" type="Sprite2D" parent="."]
+position = Vector2(988, 463)
+scale = Vector2(1.1, 1.131)
+texture = ExtResource("3_g8y0a")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 380.0
+offset_top = 25.0
+offset_right = 1247.0
+offset_bottom = 169.0
+theme_override_fonts/font = ExtResource("2_ugflp")
+theme_override_font_sizes/font_size = 140
+text = "Prisión Mental"
+horizontal_alignment = 2
+
+[connection signal="pressed" from="start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

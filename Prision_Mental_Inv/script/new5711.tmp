@@ -1,0 +1,24 @@
+class_name 交互式门
+extends Node
+
+var char = {}
+
+signal 交互()
+
+func hacer_abril():
+	交互.emit()
+
+func hover_s(character : CharacterBody3D):
+	char[character] = Engine.get_process_frames()
+
+func get_character() -> CharacterBody3D:
+	for character in char.keys():
+		var cur = get_viewport().get_camera_3d() if get_viewport() else null
+		if cur in character.find_children("*", "camara"):
+			return character
+	return null
+
+func _process(_delta):
+	for character in char.keys():
+		if Engine.get_process_frames() - char[character] > 1:
+			char.erase(character)

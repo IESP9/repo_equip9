@@ -1,0 +1,24 @@
+class_name door
+extends Node
+
+var char = {}
+
+signal abril_door()
+
+func hacer_abril():
+	abril_door.emit()
+
+func hover_s(character : CharacterBody3D):
+	char[character] = Engine.get_process_frames()
+
+func get_character() -> CharacterBody3D:
+	for character in char.keys():
+		var cur = get_viewport().get_camera_3d() if get_viewport() else null
+		if cur in character.find_children("*", "camara"):
+			return character
+	return null
+
+func _process(_delta):
+	for character in char.keys():
+		if Engine.get_process_frames() - char[character] > 1:
+			char.erase(character)

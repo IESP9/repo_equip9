@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdk6hwb4hi2wc"]
+
+[ext_resource type="Script" path="res://script/player.gd" id="1_tn3j4"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3rsb5"]
+radius = 0.3
+height = 1.8
+
+[node name="Player" type="CharacterBody3D" groups=["Player"]]
+collision_mask = 3
+script = ExtResource("1_tn3j4")
+speed = null
+acceleration = null
+jump_height = null
+camera_sens = null
+crouch_speed_multiplier = null
+crouch_camera_height = null
+crouch_collision_height = null
+pickup_range = null
+
+[node name="CShape" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("CapsuleShape3D_3rsb5")
+
+[node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
+current = true
+
+[node name="RayCast3D" type="RayCast3D" parent="Camera"]
+target_position = Vector3(0, 0, -3.24)
+collision_mask = 3
+
+[node name="HandPosition" type="Marker3D" parent="Camera"]
+transform = Transform3D(0.986862, 0.161569, 0, -0.161569, 0.986862, 0, 0, 0, 1, 0.481246, -0.354964, -0.842242)
+
+[node name="Punto_Medio" type="Polygon2D" parent="."]
+position = Vector2(355.337, 183.501)
+scale = Vector2(0.444439, 0.499998)
+polygon = PackedVector2Array(636, 363, 636, 367.037, 636, 368.061, 636, 369, 636.784, 369, 638.18, 369, 642.831, 369, 644.049, 369, 645, 369, 645, 368.297, 645, 366.82, 645, 362.863, 645, 361.978, 645, 361, 643.871, 361, 642.786, 361, 638.8, 361, 638.268, 361, 637.249, 361, 636, 361, 636, 361.938)
